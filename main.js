@@ -34,9 +34,7 @@ features of the CSS@media rule like min-height,min-width,orientation,etc*/
 //   }
 // }
 // The above method is also do the same works as below done.
-if(window.innerWidth<=400) {
-  change_heading.innerHTML="Hello";
-}
+
 // let resume=document.querySelector("#resume_footer_mid-section-part2");
 // resume.addEventListener("click",(e) => {
 //   e.preventDefault();
