@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact-Aryan</title>
+    <link rel="stylesheet" href="contact.css" />
+        <link rel="icon" href="iseweb1.jfif" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Creepster&family=Oleo+Script&family=Reggae+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&family=ZCOOL+XiaoWei&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Nixie+One&family=Spectral+SC:wght@200&family=Walter+Turncoat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Germania+One&family=Nixie+One&family=Spectral+SC:wght@200&family=Walter+Turncoat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Creepster&family=Oleo+Script&family=Reggae+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="body">
+      <div id="container">
+        <h1 id="thanks_name"></h1>
+        <h2 id="explanation"></h2>
+        <p id="excuse1"></p>
+        <p id="excuse2"></p>
+        <p id="excuse3"></p>
+        <button id="ok_button"></button>
+      </div>
+    </section>
+    <section id="opacity_of_contact_page">
+      <nav class="navbar">
+        <div class="nav_phone">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+        <div class="logo">
+          <img src="logo.jpg" alt="logo" />
+          <!-- <div class="vertical_line"></div> -->
+          <div class="web_name" id="active_web_name">
+            <a href="index.html" title="click here to go to the Home Page">
+              Roy.com</a
+            >
+          </div>
+        </div>
+        <ul class="navmenu">
+          <li>
+            <a class="list nav_list" href="index.html">Home</a>
+          </li>
+          <li><a class="list nav_list" href="about.html">About Me</a></li>
+          <li><a class="list nav_list" href="project.html">Projects</a></li>
+          <li>
+            <a class="list nav_list" href="contact.html" id="fixed_underline"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <section class="contact_form off">
+        <div class="heading_contact_me">
+          <div class="contact">
+            <h1 class="contac_me">CONTACT ME</h1>
+            <div class="about_contact">
+              Get in touch and I will get back to you as soon as I can. I look
+              forward to hearing from you! You can follow me on FaceBook as well
+              as on LinkedIn.
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="form_list">
+            <div class="name_of_form">Let's talk.But you first</div>
+            <!-- action="" method="post" -->
+            <form id="form">
+              <div class="relative_position">
+                <!-- <label for="NAME"></label> -->
+                <i class="fas fa-user input_logo"></i>
+                <!-- name="" attribute is used if you want to saved your data to the server -->
+                <!-- value="" attribute is used whenever you need to print the same name(for example, submit the form) in every browser -->
+                <input
+                  type="text"
+                  name="username"
+                  id="NAME"
+                  autocomplete="off"
+                  placeholder="Tony Stark"
+                />
+                <i class="fas fa-exclamation-circle output_incorrect"></i>
+                <i class="far fa-check-circle output_correct"></i>
+                <div class="error_msg"></div>
+              </div>
+              <div class="relative_position">
+                <!-- <label for="EMAIL"></label> -->
+
+                <i class="far fa-envelope input_logo"></i>
+                <input
+                  type="text"
+                  name="email"
+                  id="EMAIL"
+                  autocomplete="off"
+                  placeholder="tonystark@abc.com"
+                />
+                <i class="fas fa-exclamation-circle output_incorrect"></i>
+                <i class="far fa-check-circle output_correct"></i>
+                <div class="error_msg"></div>
+              </div>
+              <div class="relative_position">
+                <!-- <label for="MESSAGE"></label> -->
+                <i class="far fa-comment-dots input_logo"></i>
+                <input
+                  type="text"
+                  name="Message"
+                  id="MESSAGE"
+                  autocomplete="off"
+                  placeholder="Your concern"
+                />
+                <i class="fas fa-exclamation-circle output_incorrect"></i>
+                <i class="far fa-check-circle output_correct"></i>
+                <div class="error_msg"></div>
+              </div>
+              <div class="relative_position">
+                <!-- <label for="I'm_not_a_robot"></label> -->
+                <i class="fas fa-lock input_logo"></i>
+                <input
+                  type="text"
+                  name="output"
+                  id="I'm_not_a_robot"
+                  autocomplete="off"
+                  placeholder="How much is 11 - 3 = ?"
+                />
+                <i class="fas fa-exclamation-circle output_incorrect"></i>
+                <i class="far fa-check-circle output_correct"></i>
+                <!-- <i class="fas fa-check-double output_correct"></i> -->
+                <div class="error_msg"></div>
+              </div>
+
+              <button type="submit" id="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="footer-bottom">
+        <div class="left_footer-bottom">
+          Copyright &copy; 2021 www.Roy.com<br />All Right Reserved
+        </div>
+        <div class="right_footer-bottom">
+          <div class="call">
+            <span id="callme">Call</span>
+            <div id="callimage">
+              <a href="tel:7654613432" target="_blank" title="Follow Me on Call"
+                ><img src="phone2.jpg"
+              /></a>
+            </div>
+          </div>
+          <div class="mail">
+            <span id="mailme">Write</span>
+
+            <div id="mailimage">
+              <a
+                href="mailto:aryanroy3865@gmail.com"
+                target="_blank"
+                title="Follow Me on Mail"
+                ><img src="mail.jpg"
+              /></a>
+            </div>
+          </div>
+
+ <div class="follow">
+          <span id="followme"> Follow</span>
+          <div class="social_media_fotter_bottom">
+            <!-- <a
+              href="https://www.facebook.com/profile.php?id=100057814296670"
+              target="_blank"
+            > -->
+            <img
+              title="Follow Me on Facebook"
+              alt="Follow Me on Facebook"
+              src="https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/0fdef751204647a3bbd7eaa2827ed4f9.webp"
+              class="Social_media_img_footer_bottom click_fb"
+            />
+            <!-- </a> -->
+
+            <!-- <a href="https://twitter.com/aryan3865?s=08" target="_blank"> -->
+            <img
+              title="Follow Me on Twitter"
+              alt="Follow Me on Twitter"
+              src="https://static.wixstatic.com/media/c7d035ba85f6486680c2facedecdcf4d.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/c7d035ba85f6486680c2facedecdcf4d.webp "
+              class="Social_media_img_footer_bottom click_twit"
+            />
+            <!-- </a> -->
+            <!-- 
+            <a
+              href="https://www.linkedin.com/in/aryan-kumar-88515121a"
+              target="_blank"
+            > -->
+            <img
+              title="Follow Me on LinkedIn"
+              alt="Follow Me on LinkedIn"
+              src="https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/6ea5b4a88f0b4f91945b40499aa0af00.webp"
+              class="Social_media_img_footer_bottom click_link"
+            />
+            <!-- </a> -->
+
+            <!-- <a
+              href="https://www.instagram.com/aryanroy.tony?r=nametag"
+              target="_blank"
+            > -->
+            <img
+              title="Follow Me on Instagram"
+              alt="Follow Me on Instagram"
+              src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/01c3aff52f2a4dffa526d7a9843d46ea.webp"
+              class="Social_media_img_footer_bottom click_insta"
+            />
+            <!-- </a> -->
+          </div>
+        </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+  <script src="contact.js"></script>
+</html>
