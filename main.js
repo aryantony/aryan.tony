@@ -142,17 +142,47 @@ input.addEventListener('keydown',function(event) {
 });
 // Initialize the terminal with the 'about:' command
 writeToTerminal('about');
+// function writeToTerminal(command) {
+//   const response=executeCommand(command);
+//   output.innerHTML+=`<div class="command-prompt">&gt; ${command}</div><div>${response}</div>`;
+//   output.scrollTop=output.scrollHeight;
+// }
 function writeToTerminal(command) {
-  const response=executeCommand(command);
-  output.innerHTML+=`<div class="command-prompt">&gt; ${command}</div><div>${response}</div>`;
-  output.scrollTop=output.scrollHeight;
+  const response = executeCommand(command.toLowerCase());
+  // if (command.toLowerCase() !== "aboutt") {
+  //   output.innerHTML += `<div class="command-prompt">&gt; ${command.toLowerCase()}</div>`;
+  //   output.scrollTop = output.scrollHeight;
+  // }
+
+  let index = 0;
+  // if (command.toLowerCase() === "about") {
+  //   output.innerHTML += `<div class="command-prompt">&gt; ${command.toLowerCase()}</div><div>${response}</div>`;
+  //   output.scrollTop = output.scrollHeight;
+  // }
+
+  const printCharacter = () => {
+    if (index < response.length) {
+      output.innerHTML += response[index];
+      index++;
+
+      if (output.scrollHeight > output.offsetHeight) {
+        output.firstChild.remove(); // Remove the first line of content
+        output.scrollTop = output.scrollHeight;
+      }
+
+      setTimeout(printCharacter, 1); // Adjust the delay (in milliseconds) between each character
+    }
+  };
+
+  setTimeout(printCharacter, 100); // Delay before printing the characters (adjust as needed)
 }
+
 
 function executeCommand(command) {
   if (command === 'about') {
     return `Greetings, Guest! Allow me to introduce Aryan, an exceptional individual currently immersed in the pursuit of Integrated Dual Degree Studies in Industrial and System Engineering at <span id="iitkgp">IIT Kharagpur</span>. Aryan has reached the impressive milestone of his third year in the esteemed KGP program, showcasing his unwavering dedication and commitment. With a profound passion for development, Aryan's expertise and skills are sure to captivate and inspire.`;
   } else if (command === 'help') {
-    return 'Available commands: <span class="helpCommand">help</span>, <span class="helpCommand">about</span>, <span class="helpCommand">hobbies</span>, <span class="helpCommand">project</span>, <span class="helpCommand">contact</span>';
+    return 'Available commands: help, about, hobbies, project, contact';
   } else if (command === 'project') {
     setTimeout(function() {
       window.location.href = "/project.html";
@@ -175,3 +205,14 @@ function executeCommand(command) {
 }
 
 
+
+const goBackButton = document.getElementById('goBackBtn');
+const goForwardButton = document.getElementById('goForwardBtn');
+
+goBackButton.addEventListener('click', () => {
+  window.history.back(); // Go back one page
+});
+
+goForwardButton.addEventListener('click', () => {
+  window.history.forward(); // Go forward one page
+});

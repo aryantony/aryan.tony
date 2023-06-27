@@ -575,25 +575,25 @@ body{
     width: 30px;
     height: 3px;
     /* background-color: blue; */
-    background-color: white;
+    background-color: #ff4136;
     margin: 5px;
   }
   .line-2 {
     width: 20px;
     height: 3px;
     /* background-color: blue; */
-    background-color: white;
+    background-color: #ffdc00;
     margin: 5px;
   }
   .line-3 {
     width: 10px;
     height: 3px;
     /* background-color: blue; */
-    background-color: white;
+    background-color: #2ecc40;
     margin: 5px;
   }
   .nav_phone {
-    position: absolute;
+    position: fixed;
     right: 17px;
     top: 6px;
     cursor: pointer;
@@ -610,7 +610,7 @@ body{
     opacity: 0;
 
     flex-direction: column;
-    background-color: #f4ece6;
+    background-color:  #10103c;
     width: 100%;
 
     text-align: center;
@@ -628,21 +628,24 @@ body{
     /* opacity: 0; */
   }
   .navmenu.active_nav_phone {
-    top: 88px;
+    top: -28px;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 110%;
     right: -18px;
     /* border: 8px solid yellow; */
     border-radius: 15px;
     opacity: 2;
     left: 0px;
     color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .animation_nav_phone_lines .line-1 {
     width: 25px;
     transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: #000000;
+    background-color: #ff10be;
   }
   .animation_nav_phone_lines .line-2 {
     opacity: 0;
@@ -650,10 +653,10 @@ body{
   .animation_nav_phone_lines .line-3 {
     width: 25px;
     transform: rotate(45deg) translate(-5px, -6px);
-    background-color: #000000;
+    background-color: #75cc69;
   }
   .navbar ul li a {
-    color: blue;
+    color: #a7a7af;
     font-size: 32px;
   }
 }
@@ -1207,7 +1210,7 @@ body{
   padding: 0 15px;
   cursor: default;
   z-index: 1000000;
-  background-color: #222345;
+  /* background-color: #222345; */
     color: #F4F4F4;
     position: relative;
 }
@@ -1342,7 +1345,7 @@ input[type="text"]::placeholder {
   background: #bcbccb;
 }
 #iitkgp{
-  color: #95a695;
+  color: lime;
 }
 @media only screen and (min-width: 0px) and (max-width: 1295px) {
   .footer_mid-section-part2{
