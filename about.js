@@ -30,7 +30,7 @@ document.querySelector(".click_link").addEventListener("click", (e) => {
 });
 document.querySelector(".click_insta").addEventListener("click", (e) => {
   e.preventDefault();
-  window.open("https://www.instagram.com/aryanroy.tony?r=nametag");
+  window.open("https://www.instagram.com/aryann.tony?r=nametag");
 });
 const output = document.getElementById('output');
 const response = `Well, Hello there!👋 I am a sanskari GenZ boy,namaste🙏  My skills primarily include Front-End & Backend Development. I am currently pursuing Integrated Dual Degree Studies in Industrial and System Engineering at IIT Kharagpur. I am, in the fourth year of my KGP period. Opensource, scalability, developer operations, and coding are some of the topics that make my eyes sparkle.`;

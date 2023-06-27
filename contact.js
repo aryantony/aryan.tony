@@ -339,7 +339,7 @@ document.querySelector(".click_link").addEventListener("click", (e) => {
 });
 document.querySelector(".click_insta").addEventListener("click", (e) => {
   e.preventDefault();
-  window.open("https://www.instagram.com/aryanroy.tony?r=nametag");
+  window.open("https://www.instagram.com/aryann.tony?r=nametag");
 });
 
 const goBackButton=document.getElementById('goBackBtn');
