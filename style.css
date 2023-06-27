@@ -69,7 +69,10 @@ body{
 .nav_phone {
   display: none;
 }
-#fixed_underline::after {
+#fixed_underline{
+  color: lime;
+}
+/* #fixed_underline::after {
   content: "";
   position: absolute;
   height: 3px;
@@ -86,7 +89,7 @@ body{
   to {
     width: 100%;
   }
-}
+} */
 .logo {
   /* border: 5px solid red; */
   display: flex;
@@ -172,7 +175,7 @@ body{
   /* position: relative; */
 }
 .firstCont{
-  height: 482px !important;
+  height: 478px !important;
   overflow: auto;
   overflow-x: hidden;
 }
@@ -210,23 +213,24 @@ body{
   /* font-size: 25px; */
   /* text-align: center; */
   /* margin-left: 33px; */
+  font-family: 'ZCOOL XiaoWei';
 }
 
 .line_break {
   width: 76px;
   height: 1px;
   /* color: black; */
-  margin-left: 151px;
+  margin-left: 145px;
   margin-top: 21px;
   background: blue;
 }
 .footer_mid-section-part1 {
   text-align: center;
   margin-top: 25px;
-  font-size: 17px;
-  letter-spacing: 0.25em;
-  font-family: "Alegreya Sans", sans-serif;
-  font-weight: bold;
+  font-size: 16px;
+  /* letter-spacing: -0.75em; */
+  font-family: monospace;
+  font-family: 'ZCOOL XiaoWei';
 }
 
 .heading_mid-section-part2 {
@@ -1283,7 +1287,7 @@ input[type="text"]::placeholder {
 .statement {
 
   overflow: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   font-family: monospace;
   /* border: 1px solid #000; */
   color: white;
@@ -1349,13 +1353,13 @@ input[type="text"]::placeholder {
 }
 @media only screen and (min-width: 0px) and (max-width: 1295px) {
   .footer_mid-section-part2{
-    height: 44px;
+    height: 45px;
     display: flex;
     background: #bcbccb;
   }
 
   .firstCont{
-    height: 472px !important;
+    height: 468px !important;
     overflow: auto;
     overflow-x: hidden;
   }

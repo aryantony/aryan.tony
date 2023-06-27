@@ -7,14 +7,16 @@ const nav_list=document.querySelectorAll(".nav_list");
 
 nav_phone.addEventListener("click",mobileMenu);
 nav_list.forEach((n) => n.addEventListener("click",closeMenu));
-
+var x=0;
 function mobileMenu() {
+  x++;
   nav_phone.classList.toggle("active_nav_phone");
   navmenu.classList.toggle("active_nav_phone");
   nav_phone.classList.toggle("animation_nav_phone_lines");
 }
 
 function closeMenu() {
+  x=0;
   nav_phone.classList.remove("active_nav_phone");
   navmenu.classList.remove("active_nav_phone");
 }
@@ -66,59 +68,58 @@ document.querySelector(".click_insta").addEventListener("click",(e) => {
 
 const available=localStorage.getItem("available")
 
-if(available!="yes")
-{
+if(available!="yes") {
 
-const statements=[
-  "> Hi",
-  "> You know who I am?",
-  "> Haha, I am kidding. You are my guest",
-  "> Let's ask with prompt what he has about me",
-];
+  const statements=[
+    "> Hi",
+    "> You know who I am?",
+    "> Haha, I am kidding. You are my guest",
+    "> Let's ask with prompt what he has about me",
+  ];
 
-const statementContainer=document.getElementById('statement');
-let currentIndex=0;
-let currentStatement="> Hi";
-let charIndex=0;
+  const statementContainer=document.getElementById('statement');
+  let currentIndex=0;
+  let currentStatement="> Hi";
+  let charIndex=0;
 
-function typeStatement() {
+  function typeStatement() {
 
 
-  if(currentStatement===null||charIndex===currentStatement.length) {
-    currentIndex=(currentIndex+1)%statements.length;
-    currentStatement=statements[currentIndex];
-    charIndex=0;
+    if(currentStatement===null||charIndex===currentStatement.length) {
+      currentIndex=(currentIndex+1)%statements.length;
+      currentStatement=statements[currentIndex];
+      charIndex=0;
 
-    if(currentIndex===0) {
-    // Delay the prompt display
-    // setTimeout(function() {
-      document.getElementById('prompt').classList.add('show');
-    // }, 2000);
-setTimeout(function() {
-  document.getElementById('terminal').classList.add('show');
-}, 1500); // Adjust the delay time (in milliseconds) as needed
-  localStorage.setItem("available","yes");
-  localStorage.setItem("initialCommand",statementContainer.innerHTML)
-      return;
+      if(currentIndex===0) {
+        // Delay the prompt display
+        // setTimeout(function() {
+        document.getElementById('prompt').classList.add('show');
+        // }, 2000);
+        setTimeout(function() {
+          document.getElementById('terminal').classList.add('show');
+        },1500); // Adjust the delay time (in milliseconds) as needed
+        localStorage.setItem("available","yes");
+        localStorage.setItem("initialCommand",statementContainer.innerHTML)
+        return;
+      }
+    }
+
+    if(charIndex<=currentStatement.length) {
+      statementContainer.innerHTML+=currentStatement.charAt(charIndex);
+      charIndex++;
+    }
+
+    if(charIndex===currentStatement.length) {
+      setTimeout(typeStatement,2000);
+      statementContainer.innerHTML+="<br>";
+    } else {
+      setTimeout(typeStatement,100);
     }
   }
 
-  if(charIndex<=currentStatement.length) {
-    statementContainer.innerHTML+=currentStatement.charAt(charIndex);
-    charIndex++;
-  }
+  typeStatement();
+} else {
 
-  if(charIndex===currentStatement.length) {
-    setTimeout(typeStatement,2000);
-    statementContainer.innerHTML+="<br>";
-  } else {
-    setTimeout(typeStatement,100);
-  }
-}
-
-typeStatement();
-}else{
-  
   const statementContainer=document.getElementById('statement');
   statementContainer.innerHTML=localStorage.getItem("initialCommand");
   console.log(localStorage.getItem("initialCommand"));
@@ -127,11 +128,12 @@ typeStatement();
 }
 const output=document.getElementById('output');
 const input=document.getElementById('input');
-
-input.focus();
-document.addEventListener('click', function() {
+if(x===0) {
   input.focus();
-});
+  document.addEventListener('click',function() {
+    input.focus();
+  });
+}
 input.addEventListener('keydown',function(event) {
   if(event.key==="Enter") {
     event.preventDefault();
@@ -148,71 +150,69 @@ writeToTerminal('about');
 //   output.scrollTop=output.scrollHeight;
 // }
 function writeToTerminal(command) {
-  const response = executeCommand(command.toLowerCase());
+  const response=executeCommand(command.toLowerCase());
   // if (command.toLowerCase() !== "aboutt") {
-  //   output.innerHTML += `<div class="command-prompt">&gt; ${command.toLowerCase()}</div>`;
-  //   output.scrollTop = output.scrollHeight;
+    output.innerHTML += `<div class="command-prompt">&gt; ${command.toLowerCase()}</div>`;
+    output.scrollTop = output.scrollHeight;
   // }
 
-  let index = 0;
+  let index=0;
   // if (command.toLowerCase() === "about") {
   //   output.innerHTML += `<div class="command-prompt">&gt; ${command.toLowerCase()}</div><div>${response}</div>`;
   //   output.scrollTop = output.scrollHeight;
   // }
 
-  const printCharacter = () => {
-    if (index < response.length) {
-      output.innerHTML += response[index];
+  const printCharacter=() => {
+    if(index<response.length) {
+      output.innerHTML+=response[index];
       index++;
 
-      if (output.scrollHeight > output.offsetHeight) {
+      if(output.scrollHeight>output.offsetHeight) {
         output.firstChild.remove(); // Remove the first line of content
-        output.scrollTop = output.scrollHeight;
+        output.scrollTop=output.scrollHeight;
       }
 
-      setTimeout(printCharacter, 1); // Adjust the delay (in milliseconds) between each character
+      setTimeout(printCharacter,1); // Adjust the delay (in milliseconds) between each character
     }
   };
 
-  setTimeout(printCharacter, 100); // Delay before printing the characters (adjust as needed)
+  setTimeout(printCharacter,100); // Delay before printing the characters (adjust as needed)
 }
 
 
 function executeCommand(command) {
-  if (command === 'about') {
+  if(command==='about') {
     return `Greetings, Guest! Allow me to introduce Aryan, an exceptional individual currently immersed in the pursuit of Integrated Dual Degree Studies in Industrial and System Engineering at <span id="iitkgp">IIT Kharagpur</span>. Aryan has reached the impressive milestone of his third year in the esteemed KGP program, showcasing his unwavering dedication and commitment. With a profound passion for development, Aryan's expertise and skills are sure to captivate and inspire.`;
-  } else if (command === 'help') {
+  } else if(command==='help') {
     return 'Available commands: help, about, hobbies, project, contact';
-  } else if (command === 'project') {
+  } else if(command==='project') {
     setTimeout(function() {
-      window.location.href = "/project.html";
-    }, 2000);
+      window.location.href="/project.html";
+    },2000);
     return "You are being redirected to the project page.";
-  } else if (command === "contact") {
+  } else if(command==="contact") {
     setTimeout(function() {
-      window.location.href = "/contact.html";
-    }, 2000);
+      window.location.href="/contact.html";
+    },2000);
     // Handle the contact command logic here
     return "You are being redirected to the contact page.";
-  }if(command==="hobbies")
- 
-  {
+  } if(command==="hobbies") {
     return "Opensource, scalability, developer operations, coding and debugging"
   }
-   else {
+  else {
     return 'Command not found. Type "help" to see available commands.';
   }
 }
 
 
 
-const goBackButton = document.getElementById('goBackBtn');
-const goForwardButton = document.getElementById('goForwardBtn');
+const goBackButton=document.getElementById('goBackBtn');
+const goForwardButton=document.getElementById('goForwardBtn');
 
-goBackButton.addEventListener('click', () => {
+goBackButton.addEventListener('click',() => {
   window.history.back(); // Go back one page
 });
 
-goForwardButton.addEventListener('click', () => {
+goForwardButton.addEventListener('click',() => {
   window.history.forward(); // Go forward one page
 });

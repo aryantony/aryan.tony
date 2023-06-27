@@ -32,4 +32,26 @@ document.querySelector(".click_insta").addEventListener("click", (e) => {
   e.preventDefault();
   window.open("https://www.instagram.com/aryanroy.tony?r=nametag");
 });
+const output = document.getElementById('output');
+const response = `Well, Hello there!👋 I am a Web Developer. My skills primarily include Front-End & Backend Development. I am currently pursuing Integrated Dual Degree Studies in Industrial and System Engineering at IIT Kharagpur. I am, in the fourth year of my KGP period. Opensource, scalability, developer operations, and coding are some of the topics that make my eyes sparkle.`;
 
+let index = 0;
+const printCharacter = () => {
+  if (index < response.length) {
+    const char = response[index];
+    const charElement = document.createElement('span');
+    
+    if (index >= 5 && index < 18) {
+      charElement.className = 'greenhelow';
+    }
+    
+    charElement.textContent = char;
+    output.appendChild(charElement);
+    
+    index++;
+    output.scrollTop = output.scrollHeight;
+    setTimeout(printCharacter, 10);
+  }
+};
+
+setTimeout(printCharacter, 100);
