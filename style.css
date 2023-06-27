@@ -1370,3 +1370,9 @@ input[type="text"]::placeholder {
     height: 393px!important;
   }
 }
+#goBackBtn{
+  cursor: pointer!important;
+}
+#goForwardBtn{
+  cursor: pointer !important;
+}

@@ -33,7 +33,7 @@ document.querySelector(".click_insta").addEventListener("click", (e) => {
   window.open("https://www.instagram.com/aryanroy.tony?r=nametag");
 });
 const output = document.getElementById('output');
-const response = `Well, Hello there!👋 I am a Web Developer. My skills primarily include Front-End & Backend Development. I am currently pursuing Integrated Dual Degree Studies in Industrial and System Engineering at IIT Kharagpur. I am, in the fourth year of my KGP period. Opensource, scalability, developer operations, and coding are some of the topics that make my eyes sparkle.`;
+const response = `Well, Hello there!👋 I am a sanskari GenZ boy,namaste🙏  My skills primarily include Front-End & Backend Development. I am currently pursuing Integrated Dual Degree Studies in Industrial and System Engineering at IIT Kharagpur. I am, in the fourth year of my KGP period. Opensource, scalability, developer operations, and coding are some of the topics that make my eyes sparkle.`;
 
 let index = 0;
 const printCharacter = () => {
@@ -55,3 +55,16 @@ const printCharacter = () => {
 };
 
 setTimeout(printCharacter, 100);
+
+
+
+const goBackButton=document.getElementById('goBackBtn');
+const goForwardButton=document.getElementById('goForwardBtn');
+
+goBackButton.addEventListener('click',() => {
+  window.history.back(); // Go back one page
+});
+
+goForwardButton.addEventListener('click',() => {
+  window.history.forward(); // Go forward one page
+});

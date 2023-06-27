@@ -184,7 +184,7 @@ function executeCommand(command) {
   if(command==='about') {
     return `Greetings, Guest! Allow me to introduce Aryan, an exceptional individual currently immersed in the pursuit of Integrated Dual Degree Studies in Industrial and System Engineering at <span id="iitkgp">IIT Kharagpur</span>. Aryan has reached the impressive milestone of his third year in the esteemed KGP program, showcasing his unwavering dedication and commitment. With a profound passion for development, Aryan's expertise and skills are sure to captivate and inspire.`;
   } else if(command==='help') {
-    return 'Available commands: help, about, hobbies, project, contact';
+    return 'Available commands: help, about, hobbies, project,resume,contact';
   } else if(command==='project') {
     setTimeout(function() {
       window.location.href="/project.html";
@@ -198,6 +198,13 @@ function executeCommand(command) {
     return "You are being redirected to the contact page.";
   } if(command==="hobbies") {
     return "Opensource, scalability, developer operations, coding and debugging"
+  }if(command==="resume")
+  {
+    setTimeout(function() {
+      window.open("/cv.html", "_blank");
+    },2000);
+    // Handle the contact command logic here
+    return "You are being redirected to the resume page.";
   }
   else {
     return 'Command not found. Type "help" to see available commands.';

@@ -1,165 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="project.css" />
-     <link rel="icon" href="iseweb1.jfif" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&family=ZCOOL+XiaoWei&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Creepster&family=Oleo+Script&family=Reggae+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Nixie+One&family=Spectral+SC:wght@200&family=Walter+Turncoat&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Germania+One&family=Nixie+One&family=Spectral+SC:wght@200&family=Walter+Turncoat&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Concert+One&family=Fredoka+One&family=Padauk&family=Saira:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    <title>Project-Aryan</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="project.css" />
+  <link rel="icon" href="iseweb1.jfif" />
+  <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&family=ZCOOL+XiaoWei&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aclonica&family=Creepster&family=Oleo+Script&family=Reggae+One&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Nixie+One&family=Spectral+SC:wght@200&family=Walter+Turncoat&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Germania+One&family=Nixie+One&family=Spectral+SC:wght@200&family=Walter+Turncoat&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Concert+One&family=Fredoka+One&family=Padauk&family=Saira:wght@100&display=swap"
+    rel="stylesheet" />
+  <title>Project-Aryan</title>
+</head>
+
+<body>
+  <div id="window" style="background-color:#222345;color:#F4F4F4; position: sticky;top:0px;">
+    <div class="threeButton">
+      <button class="btn red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+        class="btn yellow"></button><button class="btn green" id="goForwardBtn"></button><span id="title"
+        style="color:#F4F4F4"></span>
+    </div>
     <nav class="navbar">
-      <div class="nav_phone">
-        <div class="line-1"></div>
-        <div class="line-2"></div>
-        <div class="line-3"></div>
-      </div>
-      <div class="logo">
-        <img src="logo.jpg" alt="logo" />
-        <!-- <div class="vertical_line"></div> -->
-        <div class="web_name" id="active_web_name">
-          <a href="index.html" title="Currently, you're on the Home page.">
-            Roy.com</a
-          >
-        </div>
-      </div>
       <ul class="navmenu">
         <li>
           <a class="list nav_list" href="index.html">Home</a>
         </li>
         <li><a class="list nav_list" href="about.html">About Me</a></li>
-        <li>
-          <a class="list nav_list" href="project.html" id="fixed_underline"
-            >Projects</a
-          >
-        </li>
+        <li><a class="list nav_list" href="project.html" id="fixed_underline">Projects</a></li>
         <li><a class="list nav_list" href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <section class="projects_detail">
-      <div class="project">
-        <h2 class="project_heading">PROJECT 1</h2>
-        <p class="proj_intro">
-          This is my first self-created project. Basically, you can learn
-          everything there is to know about me through this endeavour. The goal
-          of this endeavour was to learn more about myself. To create this, I
-          studied the fundamentals of HTML, CSS, and JavaScript attributes, as
-          well as how websites work.<br />
-          To see my project, click the button below.
-        </p>
-        <div><button class="know_more_project" id="km1">Click Me</button></div>
-      </div>
-      <div class="project">
-        <h2 class="project_heading">PROJECT 2</h2>
-        <p class="proj_intro">
-          This is the second project I've completed for my ISE class. Basically,
-          this project contains all of my industrial department's academic
-          notes. The goal of our endeavour was to assist someone who was
-          unfamiliar with our academic notes. I utilised HTML, CSS, and
-          JavaScript attributes to make this.<br />To see my project, click the
-          button below.
-        </p>
-        <div><button class="know_more_project" id="km2">Click Me</button></div>
-      </div>
-    </section>
-    <footer class="footer-bottom offfooter">
-      <div class="left_footer-bottom">
-        Copyright &copy; 2021 www.Roy.com<br />All Right Reserved
-      </div>
-      <div class="right_footer-bottom">
-        <div class="call">
-          <span id="callme">Call</span>
-          <div id="callimage">
-            <a href="tel:7654613432" target="_blank" title="Follow Me on Call"
-              ><img src="phone2.jpg"
-            /></a>
+  </div>
+  <nav class="navbar">
+    <div class="nav_phone">
+      <div class="line-1"></div>
+      <div class="line-2"></div>
+      <div class="line-3"></div>
+    </div>
+
+  </nav>
+  <section class="projects_detail">
+    <div class="project-section">
+      <div class="project-card" onclick="openModal(`http://www.react.blueberry.devx.al/`)">
+
+
+        <div class="descript">
+          <div id="windowk" style="background-color:#222345;color:#F4F4F4;">
+            Project-1
+            <div class="threeButtons">
+              <button class="btns red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+                class="btns yellow"></button><button class="btns green" id="goForwardBtn"></button><span id="title"
+                style="color:#F4F4F4"></span>
+            </div>
+
+          </div>
+          <div class="divdesript">This e-commerce website is built using React.js for the frontend and Node.js for the backend. React.js is a
+            popular JavaScript library for building user interfaces, while Node.js is a runtime environment that allows
+            JavaScript code to run on the server-side.
+            <li><span class="lamecolor">User Interface</span>: The website utilizes the React.js library to create a responsive and interactive user interface. React components are used to build various sections of the website, such as product listings, shopping cart, and user authentication.</li>
+            <li><span class="lamecolor">RESTful API</span>: The backend, built with Node.js, follows the principles of a RESTful architecture. It exposes a set of API endpoints that the frontend interacts with to perform various operations, such as fetching product data, processing orders, managing user authentication, and reviews.</li>
+            <li><span class="lamecolor">Database</span>: The website utilizes a database system, such as MongoDB , to store and manage data. Node.js interacts with the database to retrieve and update information related to products, users, and orders.</li>
+            <li>You love the interface of the login popup</li>
           </div>
         </div>
-        <div class="mail">
-          <span id="mailme">Write</span>
+        <img src="./p1.png" alt="Project 1">
+      </div>
 
-          <div id="mailimage">
-            <a
-              href="mailto:aryanroy3865@gmail.com"
-              target="_blank"
-              title="Follow Me on Mail"
-              ><img src="mail.jpg"
-            /></a>
+      <div class="project-card" onclick="openModal('https://bestsolar.al/')">
+        <div class="descript">
+          <div id="windowk" style="background-color:#222345;color:#F4F4F4;">
+            Project-2
+            <div class="threeButtons">
+              <button class="btns red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+                class="btns yellow"></button><button class="btns green" id="goForwardBtn"></button><span id="title"
+                style="color:#F4F4F4"></span>
+            </div>
+
+          </div>
+          <div class="divdesript">The website offers information and consultation services for solar panel installation, focusing on the benefits, costs, and savings. It aims to make homes and businesses more efficient and sustainable. The website is user-friendly with a google map functionality embeded for easy location search made in react.js
+            <li><span class="lamecolor">User Interface React App</span>: React components are used to build various sections of the website, such as map, searching available city, form execution .</li>
+            <li>You love the interface of the form section and searching functionality</li>
           </div>
         </div>
+        <img src="./p5.png" alt="Project 2">
 
-        <div class="follow">
-          <span id="followme"> Follow</span>
-          <div class="social_media_fotter_bottom">
-            <!-- <a
+      </div>
+      <div class="project-card" onclick="openModal('https://blueberrysgrill.com/')">
+        <div class="descript">
+          <div id="windowk" style="background-color:#222345;color:#F4F4F4;">
+            Project-3
+            <div class="threeButtons">
+              <button class="btns red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+                class="btns yellow"></button><button class="btns green" id="goForwardBtn"></button><span id="title"
+                style="color:#F4F4F4"></span>
+            </div>
+
+          </div>
+          <div class="divdesript">The entire CSS code for this frontend website has been crafted from scratch, with no pre-built or ready-made components utilized. Every single line of code has been meticulously written and tailored to suit the unique design and styling requirements of the website.
+            <li><span class="lamecolor">User Interface Frontend App</span>: A responsive website using <span class="lamecolor">HTML, CSS, and JavaScript</span> to showcase the company's products and services.</li>
+            <li>You love the complete architecture of the website</li>
+          </div>
+        </div>
+        <img src="./p3.png" alt="Project 2">
+
+      </div>
+      <div class="project-card" onclick="openModal('http://ermalaliraj.com/')">
+        <div class="descript">
+          <div id="windowk" style="background-color:#222345;color:#F4F4F4;">
+            Project-4
+            <div class="threeButtons">
+              <button class="btns red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+                class="btns yellow"></button><button class="btns green" id="goForwardBtn"></button><span id="title"
+                style="color:#F4F4F4"></span>
+            </div>
+
+          </div>
+          <div class="divdesript">This portfolio is an exquisite creation that blends the artistry of HTML, the elegance of CSS, and the interactivity of JavaScript. Carefully constructed with meticulous attention to detail, it exudes a sense of professionalism and creativity that captivates visitors.
+            <li><span class="lamecolor">Html, Css, and JavaScript</span>: Every line of code has been crafted by skillful hands, resulting in a harmonious symphony of colors, fonts, and layouts. The HTML acts as the foundation, providing the structure and content, while CSS adds its enchanting touch, elegantly styling every element, ensuring a seamless visual experience. JavaScript, the dynamic force behind the scenes, adds interactivity and functionality, making the portfolio come alive with captivating animations, responsive design, and engaging user interactions.</li>
+           
+          </div>
+        </div>
+        <img src="./p6.png" alt="Project 2">
+
+      </div>
+      <div class="project-card" onclick="openModal('https://github.com/aryantony/ChasingDevs')">
+        <div class="descript">
+          <div id="windowk" style="background-color:#222345;color:#F4F4F4;">
+            Project-5
+            <div class="threeButtons">
+              <button class="btns red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+                class="btns yellow"></button><button class="btns green" id="goForwardBtn"></button><span id="title"
+                style="color:#F4F4F4"></span>
+            </div>
+
+          </div>
+          <div class="divdesript">Our team, led by myself as the captain, comprised a group of talented sophomores collaborating alongside an experienced senior. Together, we embarked on an exciting journey to create a cutting-edge website for the prestigious Gymkhana Hackathon. This event, organized by the esteemed <span class="lamecolor">Technology Students' Gymkhana IIT Kharagpur</span>, served as a platform for us to showcase our skills in the MERN stack.
+            <li><span class="lamecolor">Experience</span>: With unwavering determination and a passion for excellence, our team dedicated countless hours to crafting a remarkable website that encapsulated the spirit of the Gymkhana Hackathon. Utilizing the power and versatility of the <span class="lamecolor">MERN stack (MongoDB, Express.js, React.js, and Node.js)</span>, we harmoniously integrated each technology to ensure a seamless and dynamic user experience.</li>
+            <li>Ultimately, our participation in the Gymkhana Hackathon and the creation of this extraordinary website exemplified our commitment to pushing boundaries and delivering exceptional results. It was an exhilarating experience that not only showcased our technical prowess but also highlighted our ability to work as a cohesive team, united by a shared vision of excellence.</li>
+           
+          </div>
+        </div>
+        <img src="./p10.png" alt="Project 2">
+
+      </div>
+      <div class="project-card" onclick="openModal('https://github.com/aryantony/Delicious---Full-Stack')">
+        <div class="descript">
+          <div id="windowk" style="background-color:#222345;color:#F4F4F4;">
+            Project-6
+            <div class="threeButtons">
+              <button class="btns red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+                class="btns yellow"></button><button class="btns green" id="goForwardBtn"></button><span id="title"
+                style="color:#F4F4F4"></span>
+            </div>
+
+          </div>
+          <div class="divdesript">Welcome to my restaurant website, where I began my journey into backend development using Node.js. One of the exciting features of this website is the dynamic image fetching from the backend. Through the seamless integration of Node.js, I ensure that the images displayed on the frontend are continuously updated based on the latest changes made in the admin page.
+            <li><span class="lamecolor">Admin Route</span>: In the admin section, I have provided an intuitive interface where you can effortlessly manage the images and their accompanying details. You have the power to delete images that are no longer relevant, add new ones to keep the content fresh and engaging, and even update the image URLs and headings to reflect any changes or promotions happening in the restaurant website.</li>
+            <li><span class="lamecolor">Login and Signup</span>: Developed and integrated a user authentication system using <span class="lamecolor">JSON Web Tokens (JWT)</span>.
+            </li>
+          </div>
+        </div>
+        <img src="./p9.png" alt="Project 2">
+
+      </div>
+      <div class="project-card" onclick="openModal('https://github.com/aryantony/textutils')">
+        <div class="descript">
+          <div id="windowk" style="background-color:#222345;color:#F4F4F4;">
+            Project-7
+            <div class="threeButtons">
+              <button class="btns red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+                class="btns yellow"></button><button class="btns green" id="goForwardBtn"></button><span id="title"
+                style="color:#F4F4F4"></span>
+            </div>
+
+          </div>
+          <div class="divdesript"> This website tell about the reading speed, char count, word count, line count, conversion of lower case to upper and vice versa of paragraph.
+            <li><span class="lamecolor">TextUtils React APP</span>: Used React hooks to play with javascript such as useState and useEffect</li>
+           
+            </li>
+          </div>
+        </div>
+        <img src="./p11.png" alt="Project 2">
+
+      </div>
+      <div class="project-card" onclick="openModal('https://aryantony.github.io/tic-tac-toe/')">
+        <div class="descript">
+          <div id="windowk" style="background-color:#222345;color:#F4F4F4;">
+            Project-8
+            <div class="threeButtons">
+              <button class="btns red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+                class="btns yellow"></button><button class="btns green" id="goForwardBtn"></button><span id="title"
+                style="color:#F4F4F4"></span>
+            </div>
+
+          </div>
+          <div class="divdesript"> Introducing <span class="lamecolor">"Tic Tac Toe Champ"</span> - a delightful web application crafted with HTML, CSS, and JavaScript! Get ready to embark on a thrilling journey into the world of tic-tac-toe, the beloved pen-and-paper game. This interactive app will take you back to those nostalgic moments of competing with your friends or family.
+            <li><span class="lamecolor">Step 1</span>: Brace yourself as "Tic Tac Toe Champ" transforms your screen into a virtual tic-tac-toe playground. The familiar grid, pencil, and paper have now become a captivating digital experience.</li>
+            <li><span class="lamecolor">Step 2</span>: Enter the names of the two players into the designated input fields. Allow your imagination to run wild as you come up with catchy and exciting player names.</li>
+            <li><span class="lamecolor">Step 3</span>: Brace yourself as "Tic Tac Toe Champ" transforms your screen into a virtual tic-tac-toe playground. The familiar grid, pencil, and paper have now become a captivating digital experience.</li>
+            <li><span class="lamecolor">Step 4</span>: Immerse yourself in the immersive gameplay, appreciating the flawless design and smooth user interface that enhances your gaming experience.</li>
+            <li><span class="lamecolor">Step 5</span>:Enjoy the thrill of victory or experience the bittersweet taste of defeat as you engage in friendly competition. Let the excitement and tension fill the air as you strive to outsmart your opponent.</li>
+            <li>"Tic Tac Toe Champ" promises to bring back cherished memories while adding a touch of modernity and convenience. So gather your friends, unleash your competitive spirit, and embark on an unforgettable journey of strategic play and friendly rivalry.</li>
+           
+            </li>
+          </div>
+        </div>
+        <img src="./p8.png" alt="Project 2">
+
+      </div>
+      <div class="project-card" onclick="openModal('https://aryantony.github.io/ISE-NOTES/')">
+        <div class="descript">
+          <div id="windowk" style="background-color:#222345;color:#F4F4F4;">
+            Project-9
+            <div class="threeButtons">
+              <button class="btns red h-3 w-3 rounded-full " id="goBackBtn"></button><button id="useless-btn"
+                class="btns yellow"></button><button class="btns green" id="goForwardBtn"></button><span id="title"
+                style="color:#F4F4F4"></span>
+            </div>
+
+          </div>
+          <div class="divdesript"> Created a website that contain all Academic Material and references for the core subjects of the <span class="lamecolor">Industrial and Systems Engineering, IIT Kharagpur</span>
+            <li><span class="lamecolor">Academic Notes</span>: More than 4 thousands students of IIT Kharagpur are using this website for their academic references.</li>
+            <li><span class="lamecolor">Key Accomplishments</span>: Gathered and organized academic notes for the ISE department, received +ve feedback from students and faculty
+              members for the usefulness of the website and optimized the website for performance and user experience.</li>
+          </div>
+        </div>
+        <img src="./p7.png" alt="Project 2">
+
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="">
+      </div>
+    </div>
+  </section>
+  <footer class="footer-bottom offfooter">
+    <div class="left_footer-bottom">
+      Copyright &copy; 2021 www.Roy.com<br />All Right Reserved
+    </div>
+    <div class="right_footer-bottom">
+      <div class="call">
+        <span id="callme">Call</span>
+        <div id="callimage">
+          <a href="tel:7654613432" target="_blank" title="Follow Me on Call"><img src="phone2.jpg" /></a>
+        </div>
+      </div>
+      <div class="mail">
+        <span id="mailme">Write</span>
+
+        <div id="mailimage">
+          <a href="mailto:aryanroy3865@gmail.com" target="_blank" title="Follow Me on Mail"><img src="mail.jpg" /></a>
+        </div>
+      </div>
+
+      <div class="follow">
+        <span id="followme"> Follow</span>
+        <div class="social_media_fotter_bottom">
+          <!-- <a
                 href="https://www.facebook.com/profile.php?id=100057814296670"
                 target="_blank"
               > -->
-            <img
-              title="Follow Me on Facebook"
-              alt="Follow Me on Facebook"
-              src="https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/0fdef751204647a3bbd7eaa2827ed4f9.webp"
-              class="Social_media_img_footer_bottom click_fb"
-            />
-            <!-- </a> -->
+          <img title="Follow Me on Facebook" alt="Follow Me on Facebook"
+            src="https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/0fdef751204647a3bbd7eaa2827ed4f9.webp"
+            class="Social_media_img_footer_bottom click_fb" />
+          <!-- </a> -->
 
-            <!-- <a href="https://twitter.com/aryan3865?s=08" target="_blank"> -->
-            <img
-              title="Follow Me on Twitter"
-              alt="Follow Me on Twitter"
-              src="https://static.wixstatic.com/media/c7d035ba85f6486680c2facedecdcf4d.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/c7d035ba85f6486680c2facedecdcf4d.webp "
-              class="Social_media_img_footer_bottom click_twit"
-            />
-            <!-- </a> -->
-            <!-- 
+          <!-- <a href="https://twitter.com/aryan3865?s=08" target="_blank"> -->
+          <img title="Follow Me on Twitter" alt="Follow Me on Twitter"
+            src="https://static.wixstatic.com/media/c7d035ba85f6486680c2facedecdcf4d.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/c7d035ba85f6486680c2facedecdcf4d.webp "
+            class="Social_media_img_footer_bottom click_twit" />
+          <!-- </a> -->
+          <!-- 
               <a
                 href="https://www.linkedin.com/in/aryan-kumar-88515121a"
                 target="_blank"
               > -->
-            <img
-              title="Follow Me on LinkedIn"
-              alt="Follow Me on LinkedIn"
-              src="https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/6ea5b4a88f0b4f91945b40499aa0af00.webp"
-              class="Social_media_img_footer_bottom click_link"
-            />
-            <!-- </a> -->
+          <img title="Follow Me on LinkedIn" alt="Follow Me on LinkedIn"
+            src="https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/6ea5b4a88f0b4f91945b40499aa0af00.webp"
+            class="Social_media_img_footer_bottom click_link" />
+          <!-- </a> -->
 
-            <!-- <a
+          <!-- <a
                 href="https://www.instagram.com/aryanroy.tony?r=nametag"
                 target="_blank"
               > -->
-            <img
-              title="Follow Me on Instagram"
-              alt="Follow Me on Instagram"
-              src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/01c3aff52f2a4dffa526d7a9843d46ea.webp"
-              class="Social_media_img_footer_bottom click_insta"
-            />
-            <!-- </a> -->
-          </div>
+          <img title="Follow Me on Instagram" alt="Follow Me on Instagram"
+            src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/01c3aff52f2a4dffa526d7a9843d46ea.webp"
+            class="Social_media_img_footer_bottom click_insta" />
+          <!-- </a> -->
         </div>
       </div>
-    </footer>
-  </body>
-  <script src="project.js"></script>
+    </div>
+  </footer>
+</body>
+<script src="project.js"></script>
+<script>
+  // JavaScript functions for modal functionality
+  function openModal(url) {
+    // document.getElementById('modal-image').src=url;
+    window.open(url, "_blank");
+
+    // document.getElementById('myModal').style.display="block";
+  }
+
+  function closeModal() {
+    document.getElementById('myModal').style.display="none";
+  }
+</script>
+
 </html>

@@ -341,3 +341,14 @@ document.querySelector(".click_insta").addEventListener("click", (e) => {
   e.preventDefault();
   window.open("https://www.instagram.com/aryanroy.tony?r=nametag");
 });
+
+const goBackButton=document.getElementById('goBackBtn');
+const goForwardButton=document.getElementById('goForwardBtn');
+
+goBackButton.addEventListener('click',() => {
+  window.history.back(); // Go back one page
+});
+
+goForwardButton.addEventListener('click',() => {
+  window.history.forward(); // Go forward one page
+});

@@ -34,11 +34,14 @@ document.querySelector(".click_insta").addEventListener("click", (e) => {
   e.preventDefault();
   window.open("https://www.instagram.com/aryanroy.tony?r=nametag");
 });
-document.querySelector("#km1").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.open("index.html");
+
+const goBackButton=document.getElementById('goBackBtn');
+const goForwardButton=document.getElementById('goForwardBtn');
+
+goBackButton.addEventListener('click',() => {
+  window.history.back(); // Go back one page
 });
-document.querySelector("#km2").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.open("https://roy-com.github.io/ISE-NOTES/");
+
+goForwardButton.addEventListener('click',() => {
+  window.history.forward(); // Go forward one page
 });
