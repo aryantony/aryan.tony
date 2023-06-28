@@ -182,7 +182,7 @@ function writeToTerminal(command) {
 
 function executeCommand(command) {
   if(command==='about') {
-    return `Greetings, Guest! Allow me to introduce Aryan, an exceptional individual currently immersed in the pursuit of Integrated Dual Degree Studies in Industrial and System Engineering at <span id="iitkgp">IIT Kharagpur</span>. Aryan has reached the impressive milestone of his third year in the esteemed KGP program, showcasing his unwavering dedication and commitment. With a profound passion for development, Aryan's expertise and skills are sure to captivate and inspire.`;
+    return `Greetings, Guest! Allow me to introduce Aryan, an exceptional individual currently immersed in the pursuit of Integrated Dual Degree Studies in Industrial and System Engineering at IIT Kharagpur. Aryan has reached the impressive milestone of his third year in the esteemed KGP program, showcasing his unwavering dedication and commitment. With a profound passion for development, Aryan's expertise and skills are sure to captivate and inspire.`;
   } else if(command==='help') {
     return 'Available commands: help, about, hobbies, project,resume,contact';
   } else if(command==='project') {
